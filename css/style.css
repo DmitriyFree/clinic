@@ -154,6 +154,10 @@
   margin-top: 40px;
   display: flex;
 }
+.service-title {
+  font-size: 28px;
+  line-height: 32px;
+}
 .service-content__list {
   margin-left: 40px;
 }
@@ -186,13 +190,16 @@
 }
 .contacts-map {
   position: relative;
-  width: 750px;
-  height: 400px;
+  /* width: 750px;
+  height: 400px; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .contacts-map img {
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  background-size: contain;
 }
 .footer {
   background: #000;
@@ -229,4 +236,124 @@
 }
 .footer-social__items a img {
   margin-left: 10px;
+}
+
+@media (max-width: 1250px) {
+  .services-content {
+    padding-left: 10px;
+  }
+  .advantages-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .advantage-item {
+    margin: 20px 10px 0;
+  }
+}
+@media (max-width: 1160px) {
+  .services-content {
+    padding-left: 10px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1080px) {
+  .contacts-data {
+    min-width: 300px;
+  }
+  .contacts-map img {
+    width: 100%;
+
+  }
+  /* .contacts-inner {
+    align-items: center;
+  } */
+
+}
+@media (max-width: 1000px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-nav {
+    grid-column: 2/2;
+    grid-row: 1/3;
+    /* justify-self: center; */
+
+    /* background: chartreuse; */
+  }
+  .footer-about {
+    max-width: 400px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+    display: flex;
+  }
+  .footer-social__items a img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+}
+@media (max-width: 800px) {
+    .contacts-map {
+      margin-top: 20px;
+    }
+    .contacts-data {
+      min-width: 240px;
+    }
+    .footer-nav ul {
+      max-height: 100%;
+    }
+    .footer-nav ul a{
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .footer-nav {
+      /* grid-column: 2/2;
+      grid-row: 1/3; */
+      justify-self: center;
+    }
+}
+@media (max-width: 700px) {
+  .contacts-inner {
+    flex-direction: column;
+  }
+}
+@media (max-width: 660px) {
+  .footer-social{
+    flex-direction: column;
+  }
+  .footer-social__title {
+    padding-bottom: 10px;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media (max-width: 440px) {
+  .contacts-data__content {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .service-title {
+    text-align: center;
+  }
+  .service-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-content__list {
+    margin-top: 10px;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .footer-nav {
+    display: none;
+  }
 }
