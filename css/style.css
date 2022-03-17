@@ -50,37 +50,43 @@
   color: #000;
 }
 
-.header-btn {
-  width: 50px;
-  height: 50px;
-  position: relative;
+.header-act {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+}
+
+.header-act .login  {
+  display: flex;
   cursor: pointer;
 }
 
-.header-btn div {
+.header-act .login a {
+  color: #000;
+  transition: all 0.5s;
+  padding: 0 10px;
+}
+
+.header-act .btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-left:10px;
+  display: none;
+  cursor: pointer;
+}
+
+.header-act .btn div {
   width: 30px;
   height: 2px;
   background: #000;
   margin: 5px;
 }
 
-.login  {
-  display: flex;
-  cursor: pointer;
-}
 
-.login a {
-  color: #000;
-  transition: all 0.5s;
-  padding: 0 10px;
-}
 
 .content {
-  background: url("/images/back1.jpg");
+  background: url("./images/back1.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,11 +197,13 @@
 .timer__block-num {
   font-size: 56px;
   font-weight: bold;
+  z-index: 10;
 }
 .timer__block-text {
   position: absolute;
   bottom: 10px;
   display: block;
+  z-index: 10;
 }
 
 .advantages {
@@ -413,6 +421,12 @@
   .menu {
     display: none;
   }
+  .header-act .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .content__title {
     padding-top: 70px;
     max-width: 360px;
@@ -428,9 +442,11 @@
     max-width: 360px;
     font-size: 18px;
   }
+
   .content__btn {
     margin-top: 30px;
   }
+
   .promotion {
     position: static;
     left: 0;
@@ -438,6 +454,7 @@
     margin-top: 50px;
     width: 480px;
   }
+
   .promotion .promotion__title{
     font-size: 24px;
   }
@@ -499,21 +516,10 @@
   }
 }
 
-@media (max-width: 440px) {
-  .contacts-data__content {
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .content__title {
-    max-width: 320px;
-  }
-  .content__text {
-    max-width: 300px;
-  }
-
-}
-
 @media (max-width: 540px) {
+  .header-act .btn {
+    margin-left: 0px;
+  }
   .service-title {
     text-align: center;
   }
@@ -532,3 +538,21 @@
     display: none;
   }
 }
+
+@media (max-width: 440px) {
+  .header-act .login {
+    display: none;
+  }
+  .contacts-data__content {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content__title {
+    max-width: 320px;
+  }
+  .content__text {
+    max-width: 300px;
+  }
+
+}
+
