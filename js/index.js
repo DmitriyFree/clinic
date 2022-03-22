@@ -54,4 +54,24 @@ function timer(selector, endtime) {
   renderTime(selector);
 
 }
+
+function activeElement(element, trigger) {
+
+  const triggerElem = document.querySelector(trigger);
+  const elem = document.querySelector(element);
+
+  triggerElem.addEventListener('click', (e) => {
+    if (elem.classList.contains('active')) {
+      elem.classList.remove('active');
+    } else {
+      elem.classList.add('active');
+    }
+
+  });
+
+}
+
 timer('.timer', '2022-04-30');
+activeElement('.content .menu-mobile', '.header-act .btn')
+
+
