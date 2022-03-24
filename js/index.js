@@ -28,7 +28,6 @@ function timer(selector, endtime) {
   function renderTime(selector) {
 
     const timer = document.querySelector(selector);
-    console.log(timer);
     days = timer.querySelector('#days');
     hours = timer.querySelector('#hours');
     minutes = timer.querySelector('#minutes');
