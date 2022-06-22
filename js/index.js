@@ -70,7 +70,7 @@ function activeElement(element, trigger) {
 
 }
 
-timer('.timer', '2022-04-30');
+timer('.timer', '2022-08-31');
 activeElement('.content .menu-mobile', '.header-act .btn')
 
 
